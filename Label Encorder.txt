@@ -1,0 +1,60 @@
+# Encoding Date of the sale
+    labelencoder_X_1 = LabelEncoder()
+    X[:, 0] = labelencoder_X_1.fit_transform(X[:, 0])
+    
+    # Encoding Broker Name
+    labelencoder_X_2 = LabelEncoder()
+    X[:, 1] = labelencoder_X_2.fit_transform(X[:, 1])
+    
+    # Encoding Catalogue MF
+    labelencoder_X_3 = LabelEncoder()
+    X[:, 2] = labelencoder_X_3.fit_transform(X[:, 2])
+    
+    # Encoding Catalogue Factory Name
+    labelencoder_X_4 = LabelEncoder()
+    X[:, 3] = labelencoder_X_4.fit_transform(X[:, 3])
+    
+    # Encoding Tea Grade
+    labelencoder_X_5 = LabelEncoder()
+    X[:, 4] = labelencoder_X_5.fit_transform(X[:, 4])
+    
+    # Encoding Factory Invoice Number
+    labelencoder_X_6 = LabelEncoder()
+    X[:, 5] = labelencoder_X_6.fit_transform(X[:, 5])
+    
+    # Encoding Buyer ID
+    labelencoder_X_7 = LabelEncoder()
+    X[:, 7] = labelencoder_X_7.fit_transform(X[:, 7])
+    
+    # Encoding Buyer Name
+    labelencoder_X_8 = LabelEncoder()
+    X[:, 8] = labelencoder_X_8.fit_transform(X[:, 8])
+    
+    # Encoding Factory Name
+    labelencoder_X_9 = LabelEncoder()
+    X[:, 9] = labelencoder_X_9.fit_transform(X[:, 9])
+    
+    # Encoding Catalogue MF
+    labelencoder_X_10 = LabelEncoder()
+    X[:, 10] = labelencoder_X_10.fit_transform(X[:, 10])
+
+onehotencoder = OneHotEncoder(categorical_features=[0])
+    X = onehotencoder.fit_transform(X).toarray()
+    onehotencoder = OneHotEncoder(categorical_features=[1])
+    X = onehotencoder.fit_transform(X).toarray()
+    onehotencoder = OneHotEncoder(categorical_features=[2])
+    X = onehotencoder.fit_transform(X).toarray()
+    onehotencoder = OneHotEncoder(categorical_features=[3])
+    X = onehotencoder.fit_transform(X).toarray()
+    onehotencoder = OneHotEncoder(categorical_features=[4])
+    X = onehotencoder.fit_transform(X).toarray()
+    onehotencoder = OneHotEncoder(categorical_features=[5])
+    X = onehotencoder.fit_transform(X).toarray()
+    onehotencoder = OneHotEncoder(categorical_features=[7])
+    X = onehotencoder.fit_transform(X).toarray()
+    onehotencoder = OneHotEncoder(categorical_features=[8])
+    X = onehotencoder.fit_transform(X).toarray()
+    onehotencoder = OneHotEncoder(categorical_features=[9])
+    X = onehotencoder.fit_transform(X).toarray()
+    onehotencoder = OneHotEncoder(categorical_features=[10])
+    X = onehotencoder.fit_transform(X).toarray()
